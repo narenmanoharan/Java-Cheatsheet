@@ -1,7 +1,9 @@
 # Java
 
+### Datatypes
+
 - Identifiers
-- Assingment
+- Assignment
 - Datatypes
     - boolean
     - byte - 8 bit
@@ -24,7 +26,7 @@ String literals - Char Sequence
 -  == checks for reference equality
 
 
-###3 String Builder
+### String Builder
 
 ```
   public static void main(String[] args) {
