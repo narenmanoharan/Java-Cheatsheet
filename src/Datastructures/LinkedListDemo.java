@@ -25,6 +25,8 @@ public class LinkedListDemo {
 
         integerList.sort(Integer::compareTo);
 
+        System.out.println();
+
         Iterator<Integer> integerIterator = integerList.iterator();
 
         while (integerIterator.hasNext()) {
@@ -34,7 +36,11 @@ public class LinkedListDemo {
 
 //        integerList.removeIf(x -> x == 50);
 
+
+        integerList.remove(integerList.size()-1);
+
         integerList.forEach(System.out::println);
+
 
     }
 
