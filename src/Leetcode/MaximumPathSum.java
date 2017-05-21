@@ -10,7 +10,7 @@ class MaximumPathSum {
 
   // This function returns overall maximum path sum in 'res'
   // And returns max path sum going through root.
-  int findMaxUtil(Node node, Res res)
+  private int findMaxUtil(Node node, Res res)
   {
 
     // Base Case
@@ -39,12 +39,12 @@ class MaximumPathSum {
     return max_single;
   }
 
-  int findMaxSum() {
+  private int findMaxSum() {
     return findMaxSum(root);
   }
 
   // Returns maximum path sum in tree with given root
-  int findMaxSum(Node node) {
+  private int findMaxSum(Node node) {
 
     // Initialize result
     // int res2 = Integer.MIN_VALUE;
@@ -79,7 +79,7 @@ class Node {
   int data;
   Node left, right;
 
-  public Node(int item) {
+  Node(int item) {
     data = item;
     left = right = null;
   }
@@ -88,5 +88,5 @@ class Node {
 // An object of Res is passed around so that the
 // same value can be used by multiple recursive calls.
 class Res {
-  public int val;
+  int val;
 }
