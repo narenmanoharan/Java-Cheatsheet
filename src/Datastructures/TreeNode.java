@@ -5,8 +5,8 @@ package Datastructures;
  */
 public class TreeNode {
 
-    int val;
-    TreeNode left, right = null;
+    public int val;
+    public TreeNode left, right = null;
 
     TreeNode(int val) {
         this.val = val;
