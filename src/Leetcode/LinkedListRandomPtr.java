@@ -33,53 +33,49 @@ public class LinkedListRandomPtr {
     if(head == null){
       return null;
     }
+
+    // Creating the copy = orig_head -> new_head -> orig_sec -> next_sec
     RandomListNode n = head;
     while (n!=null){
-      RandomListNode n2 = new RandomListNode(n.label);
+      RandomListNode n1 = new RandomListNode(n.label);
       RandomListNode tmp = n.next;
-      n.next = n2;
-      n2.next = tmp;
+      n.next = n1;
+      n1.next = tmp;
       n = tmp;
     }
 
+    // Copy the random pointers
     n = head;
     while(n != null){
-      RandomListNode n2 = n.next;
+      RandomListNode n1 = n.next;
       if(n.random != null)
-        n2.random = n.random.next;
+        n1.random = n.random.next;
       else
-        n2.random = null;
+        n1.random = null;
       n = n.next.next;
     }
 
     //detach list
-    RandomListNode n2 = head.next;
+    RandomListNode n1 = head.next;
     n = head;
     RandomListNode head2 = head.next;
-    while(n2 != null && n != null){
+    while(n1 != null && n != null){
       n.next = n.next.next;
-      if (n2.next == null){
+      if (n1.next == null){
         break;
       }
-      n2.next = n2.next.next;
-
-      n2 = n2.next;
+      n1.next = n1.next.next;
+      n1 = n1.next;
       n = n.next;
     }
+
     return head2;
-
-  }
-
-  public static void main(String[] args) {
-
-    System.out.println();
-
   }
 }
 
 class RandomListNode {
 
-  public int label;
+  int label;
   RandomListNode next, random;
 
   RandomListNode(int x) {
