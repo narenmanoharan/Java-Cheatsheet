@@ -13,8 +13,8 @@ public class RandomDemo {
   public static void main(String[] args) {
 
     List random = Collections.unmodifiableList(new Random()
-                          .ints(-100, 101)
-                          .limit(2500)
+                          .ints(0, 101)
+                          .limit(20)
                           .boxed()
                           .collect(Collectors.toList()));
 

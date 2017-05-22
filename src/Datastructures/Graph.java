@@ -10,7 +10,7 @@ import java.util.Queue;
 public class Graph
 {
     private int V;   // No. of vertices
-    private LinkedList<Integer> adj[]; //Adjacency Lists
+    private LinkedList<Integer>[] adj; //Adjacency Lists
 
     // Constructor
     Graph(int v)
@@ -18,7 +18,7 @@ public class Graph
         V = v;
         adj = new LinkedList[v];
         for (int i=0; i<v; ++i)
-            adj[i] = new LinkedList();
+            adj[i] = new LinkedList<>();
     }
 
     // Function to add an edge into the graph
