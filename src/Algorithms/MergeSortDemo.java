@@ -43,7 +43,7 @@ public class MergeSortDemo {
     }
 
     System.arraycopy(nums, left, temp, index, leftEnd - left + 1);
-    System.arraycopy(nums, right, temp, index, rightEnd - left + 1);
-    System.arraycopy(temp, leftStart, nums, rightStart, size);
+    System.arraycopy(nums, right, temp, index, rightEnd - right + 1);
+    System.arraycopy(temp, leftStart, nums, leftStart, size);
   }
 }
