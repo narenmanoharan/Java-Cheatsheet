@@ -1,7 +1,6 @@
 package Datastructures;
 
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.Map;
 
 /**
@@ -37,7 +36,7 @@ public class LRUCacheDemo {
 
   public int get(int key) {
     Node n = map.get(key);
-    if(null==n){
+    if(n == null){
       return -1;
     }
     update(n);
