@@ -1,5 +1,7 @@
 # Java 8
 
+[![codebeat badge](https://codebeat.co/badges/d2a74038-4494-414a-a76a-aa226bb3f416)](https://codebeat.co/projects/github-com-narenkmanoharan-java-cheatsheet-master)
+
 * [Default Methods for Interfaces](#default-methods-for-interfaces)
 * [Lambda expressions](#lambda-expressions)
 * [Functional Interfaces](#functional-interfaces)
